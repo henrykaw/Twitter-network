@@ -1,0 +1,98 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Twitter Network Project</title>
+        <script type="text/javascript" src="d3/d3.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <div class="container-top">
+            <a>Twitter Network Project<a>
+        </div>
+        <div id="middle-strip">
+            <div id="introduction">
+                <h1>Introduction</h1>
+                <p>This Website is made for our Twitter Network project in Advanced Project in Digital
+                    Media Engineering (02830) at DTU. In this project we have gained access to a large dataset for 
+                    mutual replies in 2016. <br> <br>Our goal for this dataset is to give an insight on the network structure
+                    and make an interactable Sankey/Alluvail Diagram that shows the changes of the top 100 communities for each 
+                    month.
+                </p>
+                <h1>
+                    The Dataset
+                </h1>
+                <p>
+                    The dataset consist of two ids (one for each user) and timestamps that states when they
+                    communicated. This data was spread over 55.198 files to a total of 46.5GB. Therefore we
+                    created a csv file for each month that contains the two ids and how many times, the two users
+                    have communicated during that month. An example of the file structure can be seen below.
+                </p>
+                <table>
+                    <tr>
+                        <th>Id 1</th>
+                        <th>Id 2</th>
+                        <th>Weigth</th>
+                    </tr>
+                    <tr>
+                        <td>2992493282</td>
+                        <td>3225117373</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2264259342</td>
+                        <td>2773761983</td>
+                        <td>1</td>
+
+                    </tr>
+                    <tr>
+                        <td>4718065581</td>
+                        <td>3235358256</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>127509821</td>
+                        <td>1948813832</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2957441894</td>
+                        <td>2901655801</td>
+                        <td>5</td>
+                    </tr>
+                </table>
+                <p>
+                    The average file size is around 2.8GB with the exception of December, that have a size of 0.9GB.
+                    Since the dataset 'only' contain 10% of the total twitter activity, we made a confusion matrix 
+                    test if there is an high similarity between months.
+                </p>
+                <img src="images/confusion_matrix.png">
+                <p>
+                    Looking at the confusion matrix it's visible that there are some new users for each month,
+                    while most remain. Meaning it's likely for us to track users over time and that there are 
+                    changes in the networks which we can examine. The last month (December) have a vast difference
+                    than all the others, which is likely the result of that the amount of data observation is a thrid
+                    compared to the others months and therefore will we exclude the last month.
+                </p>
+                <h1>Basic Network Statistics</h1>
+                <table>
+                    <tr>
+                        <th>Month</th>
+                        <th>Number of Nodes</th>
+                        <th>Number of Links</th>
+                        <th>Average clustering</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>33455916</td>
+                        <td>100462806</td>
+                        <td>0.0529</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="testContent">
+            </div>
+        </div>
+    </body>
+</html>
