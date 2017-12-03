@@ -130,5 +130,43 @@
             <div id="testContent">
             </div>
         </div>
+         <div class="w3-content w3-display-container" align="center">
+            <img class="mySlides" src="images/distributions/picture1.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture2.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture3.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture4.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture5.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture6.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture7.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture8.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture9.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture10.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture11.png" style="width:50%">
+            <img class="mySlides" src="images/distributions/picture12.png" style="width:50%">
+
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
     </body>
 </html>
