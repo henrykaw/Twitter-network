@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -6,6 +7,8 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="plotlyjs-bundle.js"></script>
+        <script type="text/javascript" src="figure.js"></script>
     </head>
     <body>
         <div class="container-top">
@@ -129,7 +132,7 @@
             </div>
             <div id="testContent">
             </div>
-        </div>
+  
         <div id="Degreee">
                 <h1>Degree distrubution</h1>
                 <p> The slideshow shows the degree distrubution of the network on a log scale and on a scale showing the number of nodes with k links.
@@ -173,6 +176,37 @@
             <button class="degree_norm" onclick="plusDivs(-1)">&#10094;</button>
             <button class="degree_norm" onclick="plusDivs(1)">&#10095;</button>
         </div>
+        <div id="c2467780-1dd9-44a0-af72-ca3a54d83f36" style="width: 990px; height: 800px;" class="plotly-graph-div"></div>
+        <script type="text/javascript">
+            (function(){
+                window.PLOTLYENV={'BASE_URL': 'https://plot.ly'};
+
+                var gd = document.getElementById('c2467780-1dd9-44a0-af72-ca3a54d83f36')
+                var resizeDebounce = null;
+
+                function resizePlot() {
+                    var bb = gd.getBoundingClientRect();
+                    Plotly.relayout(gd, {
+                        width: bb.width,
+                        height: bb.height
+                    });
+                }
+
+                
+
+                
+                Plotly.plot(gd,  {
+                    data: figure.data,
+                    layout: figure.layout,
+                    frames: figure.frames,
+                    config: {"mapboxAccessToken": "pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2lxMnVvdm5iMDA4dnhsbTQ5aHJzcGs0MyJ9.X9o_rzNLNesDxdra4neC_A", "linkText": "Export to plot.ly", "showLink": true}
+                });
+                
+           }());
+        </script>
+
+    </div>
+
         
        
 
